@@ -1,8 +1,9 @@
 {
-    "name": "Aluracord - Surto (luisgrange)",
+    "name": "Aluracord - Surto",
     "theme": {
       "colors": {
         "primary": {
+          "000": "#85dda1",
           "050": "#E3F9E5",
           "100": "#C1EAC5",
           "200": "#A3D9A5",

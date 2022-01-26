@@ -67,7 +67,7 @@ function PaginaInicial(){
                         <Text variant='body3' styleSheet={{
                             marginBottom: '32px', color: appConfig.theme.colors.neutrals[300]
                         }}>
-                            {appConfig.name}
+                            {appConfig.name} ({username})
                         </Text>
 
                         <TextField
