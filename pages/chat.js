@@ -72,6 +72,7 @@ export default function ChatPage() {
         mensagem
       ])
       .then(({ data }) => {
+        console.log('Criando mensagem: ', data);
       });
 
     setMensagem('');
@@ -83,7 +84,7 @@ export default function ChatPage() {
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         backgroundColor: appConfig.theme.colors.primary[500],
         backgroundImage: `url(https://virtualbackgrounds.site/wp-content/uploads/2020/07/this-is-fine.jpeg)`,
-        backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
+        backgroundRepeat: 'no-repeat', backgroundSize: 'cover',
         color: appConfig.theme.colors.neutrals['000']
       }}
     >
@@ -115,13 +116,7 @@ export default function ChatPage() {
           }}
         >
           <MessageList mensagens={listaDeMensagens} />
-          {/* {listaDeMensagens.map((mensagemAtual) => {
-                        return (
-                            <li key={mensagemAtual.id}>
-                                {mensagemAtual.de}: {mensagemAtual.texto}
-                            </li>
-                        )
-                    })} */}
+       
           <Box
             as="form"
             styleSheet={{
@@ -192,7 +187,7 @@ function MessageList(props) {
     <Box
       tag="ul"
       styleSheet={{
-        overflow: 'scroll',
+        overflow: 'auto',
         display: 'flex',
         flexDirection: 'column-reverse',
         flex: 1,
@@ -252,11 +247,7 @@ function MessageList(props) {
               : (
                 mensagem.texto
               )}
-            {/* if mensagem de texto possui stickers:
-                           mostra a imagem
-                        else 
-                           mensagem.texto */}
-            {/* {mensagem.texto} */}
+            
           </Text>
         );
       })}
