@@ -69,7 +69,9 @@ function escutaMensagensEmTempoReal(adicionaMensagem) {
         .insert([
           // Tem que ser um objeto com os MESMOS CAMPOS que você escreveu no supabase
           mensagem
-        ])
+        ]).then(({data}) => {
+          //faça alguma coisa pra gente ae parceiro
+        })
         
   
       setMensagem('');
