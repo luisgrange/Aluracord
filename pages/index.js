@@ -56,7 +56,7 @@ function PaginaInicial(){
                         as="form"
                         onSubmit={function(e){
                             e.preventDefault();
-                            roteamento.push('/chat');
+                            roteamento.push(`/chat?username=${username}`);
                         }}
                         styleSheet={{
                             display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
